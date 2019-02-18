@@ -6,12 +6,29 @@ window.onscroll = function() {
 };
 
 
+// function scrollFunction() {
+// if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50 ) {
+//     document.getElementById("header").style.height = "50px";
+//     document.getElementById("header-text").style.fontSize = "1rem";
+//     // document.getElementById("container").style.paddingTop = "150px";
+
+// } else {
+//     document.getElementById("header").style.height = "200px";
+//     document.getElementById("header-text").style.fontSize = "3rem";
+//     // document.getElementById("container").style.paddingTop = "200px";
+// }
+// } 
+
+
 function scrollFunction() {
-if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50 ) {
-    document.getElementById("header").style.height = "30px";
-    document.getElementById("header-text").style.fontSize = "1rem";
-} else {
-    document.getElementById("header").style.height = "200px";
-    document.getElementById("header-text").style.fontSize = "1.8rem";
-}
-} 
+    if (document.body.scrollTop > 190 || document.documentElement.scrollTop > 190 ) {
+        document.getElementById("navbar").style.position = "fixed";
+        // document.getElementById("header-text").style.fontSize = "1rem";
+        // document.getElementById("container").style.paddingTop = "150px";
+    
+    } else {
+        document.getElementById("navbar").style.position = "inherit";
+        // document.getElementById("header-text").style.fontSize = "3rem";
+        // document.getElementById("container").style.paddingTop = "200px";
+    }
+    } 

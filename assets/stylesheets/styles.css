@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 html {
     height: 100%;
 }
@@ -11,14 +15,17 @@ body {
     /* max-width: 900px; */
     /* font: .9em/1.2 Arial, Helvetica, sans-serif; */
     font-family: 'Quattrocento Sans', sans-serif;
-    font-size: .9em/1.2 
+    font-size: .9em/1.2; 
+    background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1);    
 }
 
 header {
     left: 0;
     padding: 10px;
-    background-color: rgb(207, 232, 220);
-    position: fixed;
+    background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1);
+    font-family: 'Cormorant', serif;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    /* position: fixed; */
     text-align: center;
     top: 0;
     width: 100%;
@@ -26,13 +33,70 @@ header {
     transition: 0.3s;
 }
 
+#header-text {
+    font-size: 1em;
+
+}
+
+/* Navigation */
+
+nav {
+    background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 16px;
+    z-index: 1;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    
+  }
+  nav a{
+    color: #636e79;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+    position: relative;
+    float: left;
+  }
+
+  nav ul li a {
+    color: #636e79;
+    font-size: 1.1em;
+    font-weight: 300;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: #157484;
+  }
+  nav a:focus {
+    color: #157484;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  nav ul li {
+    float: right;
+  }
+
+/* Main body */
 
 
-.container {
+#container {
     height: 100%;
     display: grid;
     grid-gap: 20px;
-    margin-top: 30px;
+    margin-top: 0px;
     grid-template-areas:
         "aside"
         "article";
@@ -72,14 +136,14 @@ footer {
         height: 200px;
     }
 
-    .header-text {
-        font-size: .9em/1.2; 
+    #header-text {
+        font-size: 4em; 
     }
 
-    .container {
+    #container {
         grid-template-rows: auto 1fr auto;
         grid-template-columns: repeat(12, minmax(0, 1fr));
-        margin-top: 240px;
+        margin-top: 20px;
         
     }
 
