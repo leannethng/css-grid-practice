@@ -1,7 +1,3 @@
-* {
-    /* box-sizing: border-box; */
-  }
-
 html {
     height: 100%;
 }
@@ -16,7 +12,7 @@ body {
     background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1);    
 }
 
-header {
+.header {
     left: 0;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -29,7 +25,7 @@ header {
     transition: 0.3s;
 }
 
-#header-text {
+.header-text {
     font-size: 2.5em;
     color: #ffffff
 
@@ -37,7 +33,7 @@ header {
 
 /* Navigation */
 
-nav {
+.navbar {
     background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1);
     top: 0;
     left: 0;
@@ -49,8 +45,8 @@ nav {
     border-bottom: 1px solid #916a7062;
     
   }
-  nav a{
-    color: #916a70
+  .navbar-home{
+    color: #916a70;
     font-size: 1.1em;
     font-weight: 300;
     text-decoration: none;
@@ -62,21 +58,19 @@ nav {
     float: left;
   }
 
-  nav ul li a {
+  .navbar-link {
     color: #916a70;
     font-size: 1.1em;
     font-weight: 300;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-decoration: none;
   }
-  nav a:hover {
+  .navbar-link:hover {
     color: #64484c;
   }
-  nav a:focus {
+  .navbar-link:focus {
     color: #64484c;
   }
-  nav ul {
+
+  .navbar-items {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -87,10 +81,18 @@ nav {
     float: right;
   }
 
+  .navbar-link-right {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+  }
+  
+  
+
 /* Main body */
 
 
-#container {
+.container {
     /* height: 100%; */
     display: grid;
     grid-gap: 20px;
@@ -132,16 +134,16 @@ footer {
 /* Media Queries */
 @media (min-width: 500px) {
 
-    header {
+    .header {
         padding-top: 50px;
         height: 200px;
     }
 
-    #header-text {
+    .header-text {
         font-size: 4em; 
     }
 
-    #container {
+    .container {
         grid-template-rows: auto 1fr auto;
         grid-template-columns: repeat(12, minmax(0, 1fr));
         margin-top: 20px;

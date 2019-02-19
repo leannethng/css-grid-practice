@@ -20,6 +20,9 @@ window.onscroll = function() {
 // } 
 
 
+//try querySelector -----  document.querySelector('#demo-id');
+
+
 function scrollFunction() {
     if (document.body.scrollTop > 190 || document.documentElement.scrollTop > 190 ) {
         document.getElementById("navbar").style.position = "fixed";
