@@ -12,6 +12,12 @@ body {
     background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1);    
 }
 
+
+.grid-layout {
+  display: grid;
+  grid-template-rows: auto;
+}
+
 .header {
     left: 0;
     padding-top: 60px;
@@ -41,31 +47,50 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
-    padding-top: 16px;
+    height: 60px;
     position: fixed;
     z-index: 1;
     border-bottom: 1px solid #916a7062;
     
   }
-  .navbar-home{
+
+  .navbar-items {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-about{
+    padding-right: 0%;
+    padding-left: 1%;
+  }
+
+  .navbar-item{
+    flex: 0 0 auto;
+    justify-content: flex-end;
     color: #916a70;
     font-size: 1.1em;
     font-weight: 300;
-    text-decoration: none;
-    list-style-type: none;
     margin: 0;
     padding-right: 30px;
     padding-left: 30px;
-    position: relative;
-    float: left;
+  }
+
+  .navbar-item:nth-child(1) {
+    margin-right: auto; /*applied only to the right*/
   }
 
   .navbar-link {
     color: #916a70;
     font-size: 1.1em;
     font-weight: 300;
+    text-decoration: none;
+    list-style-type: none;
   }
+
   .navbar-link:hover {
     color: #64484c;
   }
@@ -73,29 +98,10 @@ body {
     color: #64484c;
   }
 
-  .navbar-items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-  nav ul li {
-    float: right;
-  }
-
-  .navbar-link-right {
-    padding-left: 15px;
-    padding-right: 15px;
-    text-decoration: none;
-  }
-  
-  
-
 /* Main body */
 
 
-.container {
+.case-study {
   /* height: 100%; */
   display: flex;
   flex-wrap: wrap;
@@ -136,8 +142,6 @@ figure {
 }
 
 
-
-
 img{
   max-width: 100%;
   object-fit: cover;
@@ -169,7 +173,7 @@ footer {
     font-size: 4em; 
 }
 
-.container {
+.case-study {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     margin-top: 20px;
@@ -212,26 +216,30 @@ footer {
     font-size: 4em; 
 }
 
-.container {
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+
+
+}
+.case-study {
+/*    
+    grid-template-columns: repeat(12, minmax(0, 1fr)); */
     margin-top: 20px;
     max-width: 70%;
 }
 
 figure {
-    grid-column: 1/6;
-    grid-row: 2;   
+    /* grid-column: 1/6;
+    grid-row: 2;    */
 }
 
 article {
-    grid-column: 6/13;
-    grid-row: 2;
+    /* grid-column: 6/13;
+    grid-row: 2; */
 }
 
 footer {
-    grid-column: 1 / 13;
-    grid-row: 3;
+    /* grid-column: 1 / 13;
+    grid-row: 3; */
     bottom: 0;
     width: 100%;
     margin-top: 20px;
