@@ -14,26 +14,25 @@ body {
 
 .grid-layout {
   display: grid;
-  /* grid-template-rows: auto; */
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: auto 1fr 20% auto;
   width: 100%;
   grid-gap: 10px;
   height: 100%;
   min-height: 100vh;
-  grid-template-areas: "header header header" 
+  /* grid-template-areas: "header header header" 
   "case-study1 case-study1 case-study2" 
-  "footer footer footer";
+  "footer footer footer"; */
 }
 
 .header {
     grid-row: 1;
     grid-column: 1/12;
-    grid-area: header;
+    /* grid-area: header; */
     left: 0;
     padding-top: 60px;
     padding-bottom: 60px;
-    /* background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1); */
     font-family: 'Quattrocento Sans', sans-serif;
     /* font-family: 'Cormorant', serif;
     font-style: italic; */
@@ -54,7 +53,7 @@ body {
 
 /* Navigation */
 .navbar {
-    /* background-image:linear-gradient(90deg,#e6ddde 0,#dad0d1); */
+    background-color: white;
     top: 0;
     left: 0;
     width: 100%;
@@ -116,20 +115,21 @@ body {
   flex-direction: row-reverse;
   margin: 0 auto;
   margin-top: 20px;
-  max-width: 80%;
+  /* max-width: 80%; */
   border: 1px solid #916a7062;
+  
 }
 
 .case-study1 {
   grid-column: 1/4;
   grid-row: 2;
-  grid-area: case-study1;
+  /* grid-area: case-study1; */
 }
 
 .case-study2{
   grid-column: 4/12;
   grid-row: 2;
-  grid-area: case-study2;
+  /* grid-area: case-study2; */
 }
 
 article {
@@ -157,7 +157,7 @@ img{
 }
 
 footer {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1/12;
     bottom: 0;
     width: 100%;
@@ -166,7 +166,7 @@ footer {
     border-top: 1px solid #916a7062;
     background-color: rgba(255, 255, 255, 0);
     text-align: center;
-    grid-area: footer;
+    /* grid-area: footer; */
 }
 
 
@@ -183,7 +183,18 @@ footer {
 
   .case-study {
       margin-top: 20px;
-      max-width: 80%;
+      /* max-width: 90%; */
+  }
+  .case-study1 {
+    grid-column: 1/5;
+    grid-row: 2;
+    /* grid-area: case-study1; */
+  }
+  
+  .case-study2{
+    grid-column: 5/12;
+    grid-row: 2;
+    /* grid-area: case-study2; */
   }
 
   figure {
@@ -213,7 +224,7 @@ footer {
 
   .case-study {
       margin-top: 20px;
-      max-width: 70%;
+      /* max-width: 70%; */
   }
 
   footer {
